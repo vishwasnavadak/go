@@ -1,15 +1,10 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Shortener from "./Shortener";
-// import createHistory from "history/createBrowserHistory";
 
 const App = () => {
-  // const history = createHistory({
-  //   basename: process.env.PUBLIC_URL
-  // });
-
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <Switch>
         <Route
           exact
@@ -21,7 +16,7 @@ const App = () => {
         />
         <Route path="/:shorturl" component={Shortener} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
