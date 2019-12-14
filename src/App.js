@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Shortener from "./Shortener";
+import "./style.css";
 
 const App = () => {
   return (
