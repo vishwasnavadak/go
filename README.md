@@ -1,1 +1,1 @@
-# Super Simple URL Shortener / Redirect Service 🚀
+# Super Simple URL Shortener / Redirection 🚀
