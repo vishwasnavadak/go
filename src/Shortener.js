@@ -11,6 +11,9 @@ const FETCH_URL = gql`
   }
 `;
 
+const HOME_PAGE = `https://vishwas.tech/`;
+const CAMPAIGN_URL = `?utm_source=vishwas.tech/go&utm_medium=URLshortener&utm_campaign=URLRedirect`;
+
 const Shortener = props => {
   const { loading, error, data } = useQuery(FETCH_URL, {
     skip: !props.match,
@@ -37,10 +40,10 @@ const Shortener = props => {
         </span>
       </p>
     );
-    window.location.href = "https://vishwas.tech";
+    window.location.href = `${HOME_PAGE}${CAMPAIGN_URL}`;
   } else if (data && data.urlshortener && data.urlshortener.length) {
     const { long_url } = data.urlshortener[0];
-    window.location.href = long_url;
+    window.location.href = `${long_url}${CAMPAIGN_URL}`;
   } else if (data.urlshortener.length === 0) {
     result = (
       <p className="spinner loading">
@@ -49,7 +52,7 @@ const Shortener = props => {
         </span>
       </p>
     );
-    window.location.href = "https://vishwas.tech";
+    window.location.href = `${HOME_PAGE}${CAMPAIGN_URL}`;
   }
 
   return <div className="container">{result}</div>;
