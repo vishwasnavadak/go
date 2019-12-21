@@ -1,0 +1,24 @@
+{
+  "name": "shortner-cli",
+  "version": "1.0.0",
+  "description": "cli for url shortner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hasura"
+  ],
+  "author": "Vishwasa Navada K",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-link-http": "^1.5.16",
+    "cross-fetch": "^3.0.4",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "shortid": "^2.2.15"
+  }
+}
