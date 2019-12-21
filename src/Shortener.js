@@ -4,8 +4,8 @@ import { useQuery } from "@apollo/react-hooks";
 import { FaUniversalAccess, FaRegDizzy } from "react-icons/fa";
 
 const FETCH_URL = gql`
-  query urlShortner($url: String!) {
-    urlshortner(where: { short_url: { _eq: $url } }) {
+  query urlshortener($url: String!) {
+    urlshortener(where: { short_url: { _eq: $url } }) {
       long_url
     }
   }
@@ -38,10 +38,10 @@ const Shortener = props => {
       </p>
     );
     // window.location.href = "https://vishwas.tech";
-  } else if (data && data.urlshortner && data.urlshortner.length) {
-    const { long_url } = data.urlshortner[0];
+  } else if (data && data.urlshortener && data.urlshortener.length) {
+    const { long_url } = data.urlshortener[0];
     window.location.href = long_url;
-  } else if (data.urlshortner.length === 0) {
+  } else if (data.urlshortener.length === 0) {
     result = (
       <p className="spinner loading">
         <span aria-label="Loading Spinner">
