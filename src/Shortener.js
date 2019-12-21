@@ -37,7 +37,7 @@ const Shortener = props => {
         </span>
       </p>
     );
-    // window.location.href = "https://vishwas.tech";
+    window.location.href = "https://vishwas.tech";
   } else if (data && data.urlshortener && data.urlshortener.length) {
     const { long_url } = data.urlshortener[0];
     window.location.href = long_url;
